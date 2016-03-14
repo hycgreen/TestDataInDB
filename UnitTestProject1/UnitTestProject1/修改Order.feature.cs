@@ -19,8 +19,8 @@ namespace UnitTestProject1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("新增訂單")]
-    public partial class 新增訂單Feature
+    [NUnit.Framework.DescriptionAttribute("修改訂單")]
+    public partial class 修改訂單Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -32,7 +32,7 @@ namespace UnitTestProject1
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "新增訂單", "", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "修改訂單", "", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,7 +66,7 @@ namespace UnitTestProject1
         
         public virtual void FeatureBackground()
         {
-#line 12
+#line 16
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "OrderID",
@@ -98,8 +98,8 @@ namespace UnitTestProject1
                         "NULL",
                         "51100",
                         "France"});
-#line 13
- testRunner.Given("Orders資料", ((string)(null)), table1, "Given ");
+#line 17
+ testRunner.Given("資料庫Orders資料", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "OrderID",
@@ -125,19 +125,19 @@ namespace UnitTestProject1
                         "9.80",
                         "10",
                         "0"});
-#line 16
- testRunner.And("Order Details資料", ((string)(null)), table2, "And ");
+#line 20
+ testRunner.And("資料庫Order Details資料", ((string)(null)), table2, "And ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("我在訂單作業新增訂單資料")]
-        public virtual void 我在訂單作業新增訂單資料()
+        [NUnit.Framework.DescriptionAttribute("我在訂單作業修改訂單資料(整張訂單修改)")]
+        public virtual void 我在訂單作業修改訂單資料整張訂單修改()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("我在訂單作業新增訂單資料", ((string[])(null)));
-#line 23
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("我在訂單作業修改訂單資料(整張訂單修改)", ((string[])(null)));
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 12
+#line 16
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -170,8 +170,8 @@ this.FeatureBackground();
                         "NULL",
                         "51100",
                         "France"});
-#line 24
- testRunner.Given("Orders資料", ((string)(null)), table3, "Given ");
+#line 28
+ testRunner.Given("ViewModel-Orders資料", ((string)(null)), table3, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "OrderID",
@@ -197,9 +197,9 @@ this.FeatureBackground();
                         "9.80",
                         "15",
                         "0"});
-#line 27
- testRunner.And("Order Details資料", ((string)(null)), table4, "And ");
-#line 32
+#line 31
+ testRunner.And("ViewModel-Order Details資料", ((string)(null)), table4, "And ");
+#line 36
  testRunner.When("我調用Update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -242,7 +242,7 @@ this.FeatureBackground();
                         "34.80",
                         "15",
                         "0"});
-#line 33
+#line 37
  testRunner.Then("我會得到底下訂單資料", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();

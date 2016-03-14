@@ -6,25 +6,29 @@
 #3. When 調用Update測試
 #4. AfterScenario再刪除一次[Order Details]及[Order] ID=10248 的資料，還原資料
 
+#問題：
+#1. 傳遞資料是用ViewModel，但實際只處理某幾個欄位?
+#   假設：訂單送簽，簽核只能修改 UnitPrice, Discount, Quantity，但資料傳遞是用ViewModel
+#   除了註解外有沒有較好的表達方式
 
-Feature: 新增訂單
+Feature: 修改訂單
 
 Background: 
-	Given Orders資料
+	Given 資料庫Orders資料
 	| OrderID | CustomerID | EmployeeID | OrderDate               | RequiredDate            | ShippedDate             | ShipVia | Freight | ShipName                  | ShipAddress        | ShipCity | ShipRegion | ShipPostalCode | ShipCountry |
 	| 10248   | VINET      | 5          | 1996-07-04 00:00:00.000 | 1996-08-01 00:00:00.000 | 1996-07-16 00:00:00.000 | 3       | 32.38   | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims    | NULL       | 51100          | France      |
-	And Order Details資料
+	And 資料庫Order Details資料
 	| OrderID | ProductID | UnitPrice | Quantity | Discount |
 	| 10248   | 11        | 14.00     | 12       | 0        |
 	| 10248   | 72        | 34.80     | 5        | 0        |
 	| 10248   | 42        | 9.80      | 10       | 0        |
 
 
-Scenario: 我在訂單作業新增訂單資料
-	Given Orders資料
+Scenario: 我在訂單作業修改訂單資料(整張訂單修改)
+	Given ViewModel-Orders資料
 	| OrderID | CustomerID | EmployeeID | OrderDate               | RequiredDate            | ShippedDate             | ShipVia | Freight | ShipName                  | ShipAddress        | ShipCity | ShipRegion | ShipPostalCode | ShipCountry |
 	| 10248   | VINET      | 5          | 1996-07-04 00:00:00.000 | 1996-08-01 00:00:00.000 | 1996-07-16 00:00:00.000 | 3       | 32.38   | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims    | NULL       | 51100          | France      |
-	And Order Details資料
+	And ViewModel-Order Details資料
 	| OrderID | ProductID | UnitPrice | Quantity | Discount |
 	| 10248   | 11        | 14.00     | 15       | 0        |
 	| 10248   | 72        | 34.80     | 15       | 0        |

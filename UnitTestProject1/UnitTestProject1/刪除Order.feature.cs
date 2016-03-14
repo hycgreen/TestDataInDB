@@ -99,7 +99,7 @@ namespace UnitTestProject1
                         "51100",
                         "France"});
 #line 13
- testRunner.Given("Orders資料", ((string)(null)), table1, "Given ");
+ testRunner.Given("資料庫Orders資料", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "OrderID",
@@ -126,7 +126,7 @@ namespace UnitTestProject1
                         "10",
                         "0"});
 #line 16
- testRunner.And("Order Details資料", ((string)(null)), table2, "And ");
+ testRunner.And("資料庫Order Details資料", ((string)(null)), table2, "And ");
 #line hidden
         }
         
@@ -140,7 +140,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 12
 this.FeatureBackground();
 #line 23
- testRunner.Given("OrdersID 10248", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("刪除條件OrdersID 10248", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
  testRunner.When("我調用Delete", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
