@@ -171,7 +171,7 @@ this.FeatureBackground();
                         "51100",
                         "France"});
 #line 28
- testRunner.Given("ViewModel-Orders資料", ((string)(null)), table3, "Given ");
+ testRunner.Given("ViewModel-Orders參數", ((string)(null)), table3, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "OrderID",
@@ -198,7 +198,7 @@ this.FeatureBackground();
                         "15",
                         "0"});
 #line 31
- testRunner.And("ViewModel-Order Details資料", ((string)(null)), table4, "And ");
+ testRunner.And("ViewModel-Order Details參數", ((string)(null)), table4, "And ");
 #line 36
  testRunner.When("我調用Update", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

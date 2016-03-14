@@ -103,7 +103,7 @@ this.ScenarioSetup(scenarioInfo);
                         "51100",
                         "France"});
 #line 13
- testRunner.Given("Orders資料", ((string)(null)), table1, "Given ");
+ testRunner.Given("ViewModel-Orders參數", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "OrderID",
@@ -130,7 +130,7 @@ this.ScenarioSetup(scenarioInfo);
                         "10",
                         "0"});
 #line 16
- testRunner.And("Order Details資料", ((string)(null)), table2, "And ");
+ testRunner.And("ViewModel-Order Details參數", ((string)(null)), table2, "And ");
 #line 21
  testRunner.When("我調用Insert", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

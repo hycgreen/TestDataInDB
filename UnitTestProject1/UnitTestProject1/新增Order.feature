@@ -10,10 +10,10 @@
 Feature: 新增訂單
 
 Scenario: 我在訂單作業新增訂單資料
-	Given Orders資料
+	Given ViewModel-Orders參數
 	| OrderID | CustomerID | EmployeeID | OrderDate               | RequiredDate            | ShippedDate             | ShipVia | Freight | ShipName                  | ShipAddress        | ShipCity | ShipRegion | ShipPostalCode | ShipCountry |
 	| 10248   | VINET      | 5          | 1996-07-04 00:00:00.000 | 1996-08-01 00:00:00.000 | 1996-07-16 00:00:00.000 | 3       | 32.38   | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims    | NULL       | 51100          | France      |
-	And Order Details資料
+	And ViewModel-Order Details參數
 	| OrderID | ProductID | UnitPrice | Quantity | Discount |
 	| 10248   | 11        | 14.00     | 12       | 0        |
 	| 10248   | 72        | 34.80     | 5        | 0        |
