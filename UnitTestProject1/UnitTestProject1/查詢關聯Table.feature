@@ -14,8 +14,25 @@
 #　若照這寫法，Background跟Expected會有落差，而且之後加了其他資料，測試就會失敗了
 
 #想到的解決方式
-#1. 先Delete [Shippers]，但這還要先清除其他關聯table資料，測試完後再將(ShipperID 1,2,3)加回去
-#2. 在GetShippers加入注入的點，
+#方法1. 先Delete [Shippers]，但這還要先清除其他關聯table資料，測試完後再將(ShipperID 1,2,3)加回去，這樣好像失去原本先建好關聯資料的好處
+
+#方法2. 在GetShippers加入注入的點，用isTest去判斷要不要加入另個欄位當select的條件
+#    private IEnumerable<Shipper> GetShippers(string isTest = null)
+#    {
+#        IEnumerable<Shipper> results = null;
+#
+#        using (var dbContext = new OrderDbContext())
+#        {
+#            var queryable = dbContext.Shippers.AsNoTracking();
+#
+#            if (!string.IsNullOrWhiteSpace(isTest))
+#            {
+#                results = dbContext.Shippers.Where(p => p.TestField == "TEST");
+#            }
+#        }
+#
+#        return results;
+#    }
 
 
 Feature: 查詢Shippers

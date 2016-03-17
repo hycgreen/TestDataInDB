@@ -66,7 +66,7 @@ namespace UnitTestProject1
         
         public virtual void FeatureBackground()
         {
-#line 23
+#line 40
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "ShipperID",
@@ -84,7 +84,7 @@ namespace UnitTestProject1
                         "6",
                         "CCC Shipping",
                         "(503) 555-9931"});
-#line 24
+#line 41
  testRunner.Given("資料庫Shippers資料", ((string)(null)), table1, "Given ");
 #line hidden
         }
@@ -94,18 +94,18 @@ namespace UnitTestProject1
         public virtual void 我查詢Shippers資料()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("我查詢Shippers資料", ((string[])(null)));
-#line 31
+#line 48
 this.ScenarioSetup(scenarioInfo);
-#line 23
+#line 40
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "CompanyName"});
             table2.AddRow(new string[] {
                         "Express"});
-#line 32
+#line 49
  testRunner.Given("查詢CompayName包含", ((string)(null)), table2, "Given ");
-#line 35
+#line 52
  testRunner.When("我調用GetShippers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -120,7 +120,7 @@ this.FeatureBackground();
                         "4",
                         "United Express",
                         "(503) 555-9831"});
-#line 36
+#line 53
  testRunner.Then("我會得到Shippers資料如下", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();
